@@ -963,7 +963,18 @@ var instantclick
     addPageEvent: addPageEvent,
     removePageEvent: removePageEvent,
     addEvent: addEvent,
-    removeEvent: removeEvent
+    removeEvent: removeEvent,
+    preload: preload,
+    display: display
   }
 
 }(document, location, navigator.userAgent);
+
+function sink(x) {
+  sink[' '](x);
+}
+
+sink[' '] = function() {}
+
+sink(InstantClick.preload);
+sink(InstantClick.display);
